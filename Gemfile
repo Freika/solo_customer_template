@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 gem 'bootsnap', require: false
-gem 'devise', '4.9.2'
+gem 'devise', '4.9.3'
 gem 'pg'
 gem 'puma'
 gem 'pundit'
