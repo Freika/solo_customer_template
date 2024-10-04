@@ -7,4 +7,17 @@ module ApplicationHelper
       'bg-blue-100 text-blue-700 border-blue-300'
     end
   end
+
+  def active_class?(link_path)
+    'btn-active' if current_page?(link_path)
+  end
+
+  def app_theme
+    current_user&.settings['theme'] == 'light' ? 'light' : 'dark'
+  end
+
+  def full_title(page_title = '')
+    base_title = 'SoloCustomerTemplate'
+    page_title.empty? ? base_title : "#{page_title} | #{base_title}"
+  end
 end

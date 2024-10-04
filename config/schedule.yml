@@ -1,0 +1,6 @@
+# config/schedule.yml
+
+# test_job:
+#   cron: "0 */6 * * *" # every 6 hour
+#   class: "TestJob"
+#   queue: tests
