@@ -6,18 +6,18 @@ default: &default
   password: <%= ENV['DATABASE_PASSWORD'] %>
   port: <%= ENV['DATABASE_PORT'] || '5432' %>
   host: <%= ENV['DATABASE_HOST'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: solo_customer_template_development
+  database: <%= ENV['DATABASE_NAME'] || 'solo_customer_template_development' %>
 
 test:
   <<: *default
-  database: solo_customer_template_test
+  database: <%= ENV['DATABASE_NAME'] || 'solo_customer_template_test' %>
 
 production:
   <<: *default
-  database: solo_customer_template_production
+  database: <%= ENV['DATABASE_NAME'] || 'solo_customer_template_production' %>
   url: <%= ENV['DATABASE_URL'] %>
