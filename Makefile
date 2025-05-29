@@ -37,11 +37,6 @@ debug:
 	docker attach solo_customer_template_app
 # Debugging the project
 
-
-# Running the project
-start_sidekiq:
-	docker-compose up sidekiq
-
 start:
 	docker-compose up -d solo_customer_template_app
 	make debug

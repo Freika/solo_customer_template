@@ -18,6 +18,7 @@ gem 'tailwindcss-rails', '~> 4.0'
 gem 'solid_queue'
 gem 'solid_cable'
 gem 'solid_cache'
+gem 'mission_control-jobs'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
@@ -39,6 +40,3 @@ group :development do
   gem 'foreman'
   gem 'rubocop-rails', require: false
 end
-
-# Use Redis for Action Cable
-gem 'redis'
