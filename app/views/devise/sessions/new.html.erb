@@ -10,13 +10,13 @@
           <%= f.label :email, class: 'label' do %>
             <span class="label-text">Email</span>
           <% end %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input input-bordered' %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input input-bordered w-full' %>
         </fieldset>
         <fieldset class="fieldset">
           <%= f.label :password, class: 'label' do %>
             <span class="label-text">Password</span>
           <% end %>
-          <%= f.password_field :password, autocomplete: "current-password", class: 'input input-bordered' %>
+          <%= f.password_field :password, autocomplete: "current-password", class: 'input input-bordered w-full' %>
           <% if devise_mapping.rememberable? %>
             <fieldset class="fieldset">
               <label class="label cursor-pointer">
