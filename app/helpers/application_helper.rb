@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def app_theme
-    current_user&.settings['theme'] == 'light' ? 'light' : 'dark'
+    current_user&.settings.try(:[], 'theme') == 'light' ? 'light' : 'dark'
   end
 
   def full_title(page_title = '')
