@@ -6,29 +6,29 @@
     </div>
     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 px-5 py-5">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form-body ') do |f| %>
-        <div class="form-control">
+        <fieldset class="fieldset">
           <%= f.label :email, class: 'label' do %>
             <span class="label-text">Email</span>
           <% end %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input input-bordered' %>
-        </div>
-        <div class="form-control">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input input-bordered w-full' %>
+        </fieldset>
+        <fieldset class="fieldset">
           <%= f.label :password, class: 'label' do %>
             <span class="label-text">Password</span>
           <% end %>
-          <%= f.password_field :password, autocomplete: "current-password", class: 'input input-bordered' %>
+          <%= f.password_field :password, autocomplete: "current-password", class: 'input input-bordered w-full' %>
           <% if devise_mapping.rememberable? %>
-            <div class="form-control">
+            <fieldset class="fieldset">
               <label class="label cursor-pointer">
                 <span class="label-text">Remember me</span>
                 <%= f.check_box :remember_me, class: 'checkbox checkbox-sm' %>
               </label>
-            </div>
+            </fieldset>
           <% end %>
-        </div>
-        <div class="form-control mt-6">
+        </fieldset>
+        <fieldset class="fieldset mt-6">
           <%= f.submit "Log in", class: 'btn btn-primary' %>
-        </div>
+        </fieldset>
 
         <%= render "devise/shared/links" %>
       <% end %>
