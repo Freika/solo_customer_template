@@ -24,7 +24,7 @@ until nc -zv $DATABASE_HOST ${DATABASE_PORT:-5432}; do
 done
 
 # Install gems
-gem update --system 3.5.7
+gem update --system 3.6.9
 gem install bundler --version '2.5.9'
 
 # Create the database
