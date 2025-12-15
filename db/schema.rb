@@ -23,7 +23,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_04_183706) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
-    t.jsonb "settings", default: {"theme"=>"dark"}
+    t.jsonb "settings", default: {"theme" => "dark"}
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
